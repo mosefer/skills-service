@@ -50,7 +50,7 @@ limitations under the License.
 
         <div class="row mt-3">
           <div class="col col-md-3 text-secondary" id="selfReportLabel">
-            Self Report Skills:
+            Self Report Default:
           </div>
           <div class="col">
             <b-form-checkbox v-model="selfReport.enabled"
@@ -59,8 +59,8 @@ limitations under the License.
                              aria-labelledby="pointsForLevelsLabel"
                              data-cy="selfReportSwitch"
                              switch>
-              Enable for <b>ALL</b> Skills <inline-help
-              msg="If enabled, ALL of the skills in this project will be eligible for self reporting."/>
+              Disable/Enable <inline-help
+              msg="Will serve as a default when creating new skills."/>
             </b-form-checkbox>
 
             <b-card class="mt-1">
@@ -129,10 +129,10 @@ limitations under the License.
         isLoading: true,
         selfReport: {
           enabled: false,
-          selected: 'approve',
+          selected: 'Approval',
           options: [
-            { text: 'Approval Queue (reviewed by project admins first)', value: 'approve', disabled: true },
-            { text: 'Honor System (applied right away)', value: 'honor', disabled: true },
+            { text: 'Approval Queue (reviewed by project admins first)', value: 'Approval', disabled: true },
+            { text: 'Honor System (applied right away)', value: 'HonorSystem', disabled: true },
           ],
         },
         settings: {

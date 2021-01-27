@@ -35,4 +35,8 @@ class SkillDef extends SkillDefParent {
         Subject, Skill, Badge, GlobalBadge
     }
 
+    static enum SelfReportingType {
+        Approval,
+        HonorSystem,
+    }
 }
